@@ -48,11 +48,11 @@
       background:#639EC2; 
     }
     
-    .row #rv{
+    .row #rd{
       background-color:#F0CDC9; 
       height:100%;
     }
-    .row #rv:hover{
+    .row #rd:hover{
       background-color:#E97567; 
     }
 
@@ -63,7 +63,7 @@
       <h1>Neel</h1>
       <p>Click to view Neel's profile</p>
     </div>
-    <div class="col-md-6" id="rv">
+    <div class="col-md-6" id="rd">
       <h1>Rushabh</h1>
       <p>Click to view Rushabh's profile</p>
     </div>
@@ -71,12 +71,12 @@
   <script type="text/javascript">
     $("#nv").hover(function(){
       $(this).css("width", "65%");
-      $("#rv").css("width", "35%");
+      $("#rd").css("width", "35%");
       $(this).children("p").fadeIn();
     }, function() {
         $(this).children("p").fadeOut();
     });
-    $("#rv").hover(function(){
+    $("#rd").hover(function(){
       $(this).css("width", "65%");
       $("#nv").css("width", "35%");
       $(this).children("p").fadeIn();
@@ -84,7 +84,7 @@
         $(this).children("p").fadeOut();
     });
     $("body").mouseout(function(){
-      $("#rv").css("width", "50%");
+      $("#rd").css("width", "50%");
       $("#nv").css("width", "50%");
     });
 

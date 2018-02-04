@@ -1,23 +1,93 @@
 <html>
   <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
   <title>Welcome To Our Website</title>
 
   </head>
+  <style type="text/css">
+  .row{
+    margin:0;
+  }
+  h1 {
+      font-family: "Berkshire Swash",Helvetica, sans-serif;
+      font-size: 80px;
+      color: #333;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      padding: 10px 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  p{
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      display: none;
+      /*font-size: 10px;*/
+      transform: translate(-50%, -60%);
+  }
+    div .col-md-6{
+      transition: 1s ease-in-out; 
+      cursor: pointer;
+    }
+    body{
+      height: 100%;
+    }
+   
+    .row #nv{
+      background-color:#DCE8EF; 
+      height:100%;
+    }
+    .row #nv:hover{
+      background:#639EC2; 
+    }
+    
+    .row #rv{
+      background-color:#F0CDC9; 
+      height:100%;
+    }
+    .row #rv:hover{
+      background-color:#E97567; 
+    }
+
+  </style>
 <body>
   <div class="row">
-    <div class="col-sm-6" style="background-color:lavender; height:100%;">
-	
-	
-	<h1>Neel<h1>
-	
-	
-	</div>
-    <div class="col-sm-6" style="background-color:lavenderblush; height:100%"><h1>Rushabh</h1></div>
+    <div class="col-md-6" id="nv">
+      <h1>Neel</h1>
+      <p>Click to view Neel's profile</p>
+    </div>
+    <div class="col-md-6" id="rv">
+      <h1>Rushabh</h1>
+      <p>Click to view Rushabh's profile</p>
+    </div>
   </div>
+  <script type="text/javascript">
+    $("#nv").hover(function(){
+      $(this).css("width", "65%");
+      $("#rv").css("width", "35%");
+      $(this).children("p").fadeIn();
+    }, function() {
+        $(this).children("p").fadeOut();
+    });
+    $("#rv").hover(function(){
+      $(this).css("width", "65%");
+      $("#nv").css("width", "35%");
+      $(this).children("p").fadeIn();
+    }, function() {
+        $(this).children("p").fadeOut();
+    });
+    $("body").mouseout(function(){
+      $("#rv").css("width", "50%");
+      $("#nv").css("width", "50%");
+    });
+
+  </script>
   </body>
 </html>

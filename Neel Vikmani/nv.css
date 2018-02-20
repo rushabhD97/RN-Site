@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+#onlypc {
+    display: none;
+}
+
+
+/*Main Page LHS*/
+
+#slanted {
+    position: absolute;
+    float: left;
+    background-image: url("nv.jpg");
+    background-size: cover;
+    /*    filter: grayscale(50%);*/
+    background-position: center;
+    height: 100%;
+    /*added*/
+    width: 50%;
+    transform: skewX(10deg) translateX(-65px);
+}
+
+
+/*Main Page RHS*/
+
+#lis {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    z-index: -1;
+    /*transform: skewX(-10deg);*/
+    text-align: center;
+    height: 100%;
+}
+
+.round {
+    position: relative;
+    height: 25%;
+    box-sizing: border-box;
+    /*    background: #222;*/
+    padding: 60px 30px;
+    transition: background 0.5s;
+}
+
+.round h1 {
+    transition: 0.5s;
+    font-size: 45px;
+    /*    padding: 63px 30px;*/
+    color: #fff;
+}
+
+.round:hover {
+    cursor: pointer;
+}
+
+.round:hover > h1 {
+    font-size: 50px;
+    letter-spacing: 0.5px;
+}
+
+#r1 {
+    background: #111;
+}
+
+#r4 {
+    background: url(contact.jpg);
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+}
+
+#r3 {
+    background: #222;
+}
+
+#r2 {
+    background: url(resume.jpeg);
+    filter: grayscale(100%);
+    background-size: cover;
+    /*    background-position: center;*/
+}
+
+#r2 h1 {
+    color: #111;
+}
+
+#r1:hover {
+    background-color: #111;
+}
+
+#r2:hover {
+    background: none;
+    background-color: #555;
+}
+
+#r3:hover {
+    background-color: #aaa;
+    color: #111;
+}
+
+#r4:hover {
+    background: none;
+    color: black;
+    /*    background-color: #fff;*/
+}
+
+#r4:hover > h1 {
+    color: black;
+}
+
+
+/*Fav Icons*/
+
+.fa-times {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    font-size: 40px;
+    transition: 0.3s;
+    padding: 8px;
+}
+
+.fa-times:hover {
+    background: #eee;
+    cursor: pointer;
+}
+
+
+/*After clicked on any option*/
+
+.inside {
+    color: #333;
+    display: none;
+}
+
+.inside-head h1 {
+    position: absolute;
+    top: 45%;
+    color: #eee;
+    font-size: 60px;
+    border-bottom: 2px solid #eee;
+}
+
+.inside-head {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background-color: #111;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+.space {
+    margin-left: 200px;
+}
+
+.content {
+    float: right;
+    box-sizing: border-box;
+    width: 65%;
+    height: 100%;
+    font-size: 20px;
+    padding: 60px 80px;
+    margin: 0 auto;
+}
+
+.inner-content {
+    margin: 30px auto;
+    width: 90%;
+    /*    padding: 40px 60px;*/
+}
+
+#othercourses {
+    /*    display: block;*/
+    clear: both;
+}
+
+
+/*Contacts Page*/
+
+#contact-page .content span {
+    font-size: 20px;
+    display: block;
+    /*    text-align: center;*/
+    width: 90%;
+    margin: 0 auto;
+    top: 40%;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+#contact-page .content {
+    margin-top: 100px;
+}
+
+#contact-page .content i {
+    margin: 20px;
+}
+
+#contact-page .inside-head {
+    background: url(contact.jpg);
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+}
+
+#contact-page .content {
+    box-sizing: border-box;
+}
+
+
+/*resume page*/
+
+#resume-page {
+    overflow: visible;
+}
+
+#resume-page .inside-head {
+    background: url(resume.jpeg);
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+}
+
+#resume-page .inside-head h1 {
+    color: black;
+    position: absolute;
+    border-bottom: 1px solid black;
+}
+
+#resume-page .content h1,
+#about-page .content h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.about {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#resume-page .content .bullet {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: -40px;
+    border-radius: 50%;
+    background: #555;
+    /*    margin-bottom: px;*/
+    border: 5px solid #fff;
+}
+
+#resume-page .content .bullet:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    z-index: -1;
+    height: 120px;
+    width: 2px;
+    background: #555;
+}
+
+#resume-page .content .univ {
+    position: relative;
+    top: -25px;
+    line-height: 30px;
+    height: 100px;
+    width: 100%;
+    font-size: 20px;
+    margin: 0 auto;
+    /*    padding: 5px 15px;*/
+    /*    background: #ccc;*/
+    color: #333;
+}
+
+#resume-page .content .univ h4 {
+    position: relative;
+    /*    text-transform: uppercase;*/
+    top: -5px;
+    background: #ccc;
+    padding: 0 10px;
+}
+
+#resume-page .content .univ h4 span {
+    display: inline;
+    font-size: 20px;
+}
+
+#resume-page .content .univ:before {
+    position: absolute;
+    content: "";
+    left: -20px;
+    top: 0px;
+    width: 0;
+    height: 0;
+    border-right: 10px solid #ccc;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.resume-skills {
+    /*    position: relative;*/
+    float: left;
+    width: 30%;
+    /*    border: 1px solid black;*/
+    margin: 1.66%;
+    /*    background: #999;*/
+}
+
+
+/*About Page*/
+
+#about-page .inside-head {
+    background: url(me.JPG);
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*Projects Page*/
+
+#projects-page .inside-head {
+    background: url(project.jpg);
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/**/
+
+
+/*Left side*/
+
+.inside-head {
+    position: fixed;
+}
+
+
+/*Selection Edits*/
+
+.inside .content p::selection,
+.inside .content span::selection {
+    color: #eee;
+    background: #222;
+}
+
+h1::selection {
+    color: black;
+    background-color: white;
+}
+
+
+/*SCROLLBAR
+*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #aaa;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    width: 20px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #111;
+}
+
+
+/*RADIAL BAR PLUGIN CSS*/
+
+.progress-bar {
+    position: relative;
+    height: 300px;
+    width: 200px;
+}
+
+.progress-bar div {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.progress-bar div span {
+    position: absolute;
+    font-size: 20px;
+    line-height: 150px;
+    height: 150px;
+    width: 150px;
+    left: 25px;
+    top: 25px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.progress-bar .background {
+    background-color: #b3cef6;
+}
+
+.progress-bar .rotate {
+    clip: rect(0 100px 200px 0);
+    background-color: #4b86db;
+}
+
+.progress-bar .left {
+    clip: rect(0 100px 200px 0);
+    opacity: 1;
+    background-color: #b3cef6;
+}
+
+.progress-bar .right {
+    clip: rect(0 100px 200px 0);
+    transform: rotate(180deg);
+    opacity: 0;
+    background-color: #4b86db;
+}
+
+@keyframes toggle {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*PROJECT*/
+
+.project {
+    margin: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 0px #ddd, 2px 2px 0px #eee, 1px 1px 12px #eee;
+}
+
+.expand {
+    display: none;
+}
+
+
+/*MEDIA*/
+
+@media screen and (max-width: 1321px) {
+    .resume-skills {
+        width: 49%;
+        margin: 0.2%;
+    }
+    .project {
+        margin: 20px 5px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #slanted {
+        transform: skewX(0deg) translateX(1px);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .inside-head {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+    .resume-skills {
+        width: 45%;
+        margin: 2.5%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .round h1 {
+        transition: 0.5s;
+        font-size: 30px;
+        padding-right: 60px;
+        color: #fff;
+    }
+    .round:hover > h1 {
+        font-size: 35px;
+        letter-spacing: 0.5px;
+    }
+    .round {
+        padding: 40px 0px;
+        /*        padding-right: 100px;*/
+    }
+    .space {
+        margin-left: 100px;
+    }
+    #contact-page .content span {
+        font-size: 20px;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #lis {
+        width: 100%;
+        z-index: 11;
+        /*transform: skewX(-10deg);*/
+        text-align: center;
+        height: 100%;
+    }
+    #slanted {
+        display: none;
+    }
+    .content {
+        padding: 20px 0;
+    }
+    .content p {
+        font-size: 16px;
+    }
+    .resume-skills {
+        width: 100%;
+        margin-left: 50px;
+    }
+    #education {
+        padding: 10px;
+    }
+    #education .univ h4 {
+        font-size: 15px;
+    }
+    #education .univ p,
+    #education .univ h4 span {
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+    #resume-page .content .univ h4 span {
+        font-size: 12px;
+    }
+    .content {
+        padding: 20px 0;
+    }
+    #contact-page .content span {
+        font-size: 14px;
+        padding: 10px;
+    }
+    #contact-page .content span .fa {
+        padding: 0;
+        display: block;
+    }
+    .fa-times {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        font-size: 25px;
+        transition: 0.3s;
+        padding: 12px;
+    }
+    #contact-page .content {
+        margin-top: 0px;
+    }
+    #contact-page .content span {
+        padding: 20px 5px;
+    }
+    /*
+    #wrap {
+     display: none;
+ }
+ 
+ #onlypc {
+     display: block;
+     margin: 0 auto;
+     background: #222;
+     color: #eee;
+     width: 100%;
+     text-align: center;
+ }
+*/
+}
